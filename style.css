@@ -1,0 +1,201 @@
+/* LittleStars Brand Theme Variables */
+:root {
+  --bs-primary: #2ec4b6;
+  --bs-primary-rgb: 46, 196, 182;
+  --bs-success: #1cc88a;
+  --bs-success-rgb: 28, 200, 138;
+  --bs-warning: #f6c23e;
+  --bs-warning-rgb: 246, 194, 62;
+  --bs-danger: #e74a3b;
+  --bs-danger-rgb: 231, 74, 59;
+}
+
+html {
+  height: 100%;
+}
+
+/* Global Background and Body */
+body {
+  background-color: #f4fbfa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2b3440;
+}
+
+/* Sticky Footer Layout for All Inner Pages */
+body:not(.login-page) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body:not(.login-page) > footer,
+body:not(.login-page) footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Photo Background for Login Page Only */
+body.login-page {
+  min-height: 100vh;
+  background-color: #eef7ff !important;
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(46, 196, 182, 0.35),
+      rgba(255, 255, 255, 0.55)
+    ),
+    url('tadika.jfif') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+}
+
+/* Login Card */
+.login-card {
+  border: none;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.login-card .input-group-text {
+  border-right: none;
+}
+
+.login-card .form-control {
+  border-left: none;
+}
+
+/* Bootstrap Color Overrides (Primary, Success, Warning, Danger) */
+.bg-primary {
+  background-color: #2ec4b6 !important;
+}
+
+.text-primary {
+  color: #24a89c !important;
+}
+
+.btn-primary {
+  background-color: #2ec4b6 !important;
+  border-color: #24a89c !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #24a89c !important;
+  border-color: #24a89c !important;
+}
+
+.bg-success {
+  background-color: #1cc88a !important;
+}
+
+.text-success {
+  color: #17a673 !important;
+}
+
+.bg-warning {
+  background-color: #f6c23e !important;
+}
+
+.text-warning {
+  color: #dda20a !important;
+}
+
+.bg-danger {
+  background-color: #e74a3b !important;
+}
+
+.text-danger {
+  color: #c93729 !important;
+}
+
+/* Left-Border Accent Cards (Dashboard KPIs) */
+.border-left-primary {
+  border-left: 0.25rem solid #2ec4b6 !important;
+}
+
+.border-left-success {
+  border-left: 0.25rem solid #1cc88a !important;
+}
+
+.border-left-warning {
+  border-left: 0.25rem solid #f6c23e !important;
+}
+
+.border-left-danger {
+  border-left: 0.25rem solid #e74a3b !important;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(43, 52, 64, 0.08);
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Lift for Interactive Cards & Buttons */
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(43, 52, 64, 0.14) !important;
+}
+
+/* Chart Container Sizing */
+.chart-container {
+  position: relative;
+  height: 280px;
+  width: 100%;
+}
+
+/* Table Polish for Attendance & Class Breakdown */
+.table thead th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+}
+
+.table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(46, 196, 182, 0.06);
+}
+
+/* Navbar Tweaks */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar .nav-link,
+.nav-pills .nav-link {
+  border-radius: 0.6rem !important;
+  padding: 0.45rem 0.9rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Hovering over Dashboard, Students, Attendance, etc. */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.nav-pills .nav-link:hover {
+  background-color: #ffffff !important;
+  color: #1f9d91 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Currently Active Page Tab */
+.navbar .nav-link.active,
+.nav-pills .nav-link.active {
+  background-color: #ffbe0b !important;
+  color: #2b3440 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
